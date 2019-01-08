@@ -19,8 +19,8 @@ class App < Sinatra::Base
     "Goodbye #{@user_name}!"
   end
 
-  post "multiply/ :num1/ :num2" do
-    @multiply = num1 * num2
-    "#{@multiply}"
+  get "multiply/:num1/:num2" do
+    @multiply = :num1 * :num2
+    "#{:multiply}"
   end
 end
